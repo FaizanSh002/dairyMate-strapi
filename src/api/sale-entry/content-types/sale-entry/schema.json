@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sale_entries",
+  "info": {
+    "singularName": "sale-entry",
+    "pluralName": "sale-entries",
+    "displayName": "Sale Entry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "milk_entry": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::milk-entry.milk-entry"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
